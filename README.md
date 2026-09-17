@@ -18,5 +18,15 @@ En este tutorial se modificó la apariencia visual del entorno. Se trabajó con 
 
 **Archivo:** `appearance.wbt`
 
-## Herramienta utilizada
+## Tutorial 4: Más sobre controladores
+
+En este tutorial se creó un controlador para el robot E-puck. Se utilizaron los sensores de distancia para detectar obstáculos y se programaron los motores de las ruedas para que el robot pudiera desplazarse y evitar colisiones.
+
+**Archivo:** `collision_avoidance.wbt`
+
+## Tutorial 5: Sólido compuesto y atributos de física
+
+En este tutorial se creó un sólido compuesto en forma de mancuerna utilizando un cilindro y dos esferas. También se configuraron propiedades físicas como la masa, el centro de masa, la rotación y la fricción.
+
+**Archivo:** `compound_solid.wbt`
 
