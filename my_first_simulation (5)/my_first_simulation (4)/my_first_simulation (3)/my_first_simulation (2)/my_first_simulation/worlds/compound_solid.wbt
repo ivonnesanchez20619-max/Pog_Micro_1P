@@ -1,0 +1,255 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material2 "dumbbell"
+      coulombFriction [
+        0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.10244850855533583 -0.07253444391017404 0.9920902466718585 4.366301557898931
+  position 0.2102782336906343 0.8199655156099935 0.3204994460938305
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.45 0.45 0.06
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 5737.003204664719
+  hidden position_0_1 608.2527623863347
+  hidden linearVelocity_0 -4.062989196095657e-06 -4.035770215965665e-06 1.3651237207549576e-06
+  hidden angularVelocity_0 -7.898196965049496e-05 8.720500123198701e-05 -8.414422946586094e-06
+  hidden translation_1 0 0.026000000000000006 0.02
+  hidden rotation_1 0 -0.9999999999999999 0 5.828166097422734
+  hidden linearVelocity_1 -3.461460974556998e-06 -3.5317036083298977e-06 9.386831845767652e-07
+  hidden angularVelocity_1 -3.4890548671488664 5.2217170817924705 0.005349051741775836
+  hidden translation_2 0 -0.025999999999999995 0.02
+  hidden rotation_2 0 1 0 5.066972897094365
+  hidden linearVelocity_2 -3.8743400659291505e-06 -3.826617158438592e-06 1.780621739389912e-06
+  hidden angularVelocity_2 -7.889647686805615e-05 8.707810139082963e-05 -8.41662837667439e-06
+  translation 0.4582096062257894 0.363135563604928 -1.842861569459342e-05
+  rotation 0.004227555867038595 -0.008875993623149905 0.9999516710864547 0.5890721787723702
+  controller "EPuckAvoidCollision"
+}
+WoodenBox {
+  translation 0 0.45 0.06
+  rotation 0 1 0 -5.307179586466759e-06
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.45 0.45 0.06
+  size 0.1 0.1 0.1
+}
+Solid {
+  translation 0.2 0 0.0491781593618209
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "red_brick_wall.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+Solid {
+  translation 0 0 0.02842941357054401
+  rotation 0 1 0 1.5707963267948968
+  children [
+    Group {
+      children [
+        Pose {
+          translation 0 0 0.05
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0 -0.05
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(6)"
+  contactMaterial "dumbbell"
+  boundingObject Group {
+    children [
+      Pose {
+        translation 0 0 0.05
+        children [
+          Sphere {
+            radius 0.03
+            subdivision 2
+          }
+        ]
+      }
+      Pose {
+        translation 0 0 -0.05
+        children [
+          Shape {
+            geometry Sphere {
+              radius 0.03
+              subdivision 2
+            }
+          }
+        ]
+      }
+      Cylinder {
+        height 0.1
+        radius 0.01
+      }
+    ]
+  }
+  physics Physics {
+    density 10
+    mass 2
+    centerOfMass [
+      0 0 0
+    ]
+  }
+}
+Solid {
+  translation -0.2 0 0.0491781593618209
+  children [
+    DEF BALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "red_brick_wall.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE BALL_SHAPE
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.01 1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.01 1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.01 1 0.1
+      }
+    }
+  ]
+  name "solid(5)"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.01 1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+}
