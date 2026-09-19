@@ -1,0 +1,138 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0944
+  position -0.029424631531419502 0.020190159978872243 1.794894087720358
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation 0 0 0.04
+  children [
+    Solid {
+      translation 0 0.09 0.09
+      children [
+        Shape {
+          geometry Box {
+            size 0.075 0.055 0.02
+          }
+        }
+      ]
+      name "portapilas2"
+    }
+    Solid {
+      translation 0 -0.09 0.09
+      children [
+        Shape {
+          geometry Box {
+            size 0.075 0.055 0.02
+          }
+        }
+      ]
+      name "Portapilas_1"
+    }
+    Solid {
+      translation 0 0.12 0.085
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0.9 0
+          }
+          geometry Box {
+            size 0.025 0.02 0.004
+          }
+        }
+      ]
+      name "BNO055"
+    }
+    Solid {
+      translation -0.08 0 0.085
+      children [
+        Shape {
+          geometry Box {
+            size 0.043 0.043 0.01
+          }
+        }
+      ]
+      name "L298N_Puente_H"
+    }
+    Solid {
+      translation 0.08 0 0.0825
+      children [
+        Shape {
+          geometry Box {
+            size 0.052 0.028 0.005
+          }
+        }
+      ]
+      name "SP32"
+    }
+    Solid {
+      translation 0 0 0.083
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.45 0.2
+            name "Raspberry_Pi"
+          }
+          geometry Box {
+            size 0.085 0.056 0.006
+          }
+        }
+      ]
+      name "solid(2)"
+    }
+    Solid {
+      translation 0 -0.18 0.035
+      rotation 1 0 0 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.05 0.05 0.05
+            name "rueda_derecha"
+          }
+          geometry Cylinder {
+            height 0.025
+            radius 0.035
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      translation 0 0.18 0.035
+      rotation 1 0 0 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.05 0.05 0.05
+            name "rueda_izquierda"
+          }
+          geometry Cylinder {
+            height 0.025
+            radius 0.035
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.82 0.82 0.82
+      }
+      geometry Cylinder {
+        height 0.08
+        radius 0.18
+      }
+    }
+  ]
+}
