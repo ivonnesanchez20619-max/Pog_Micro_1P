@@ -1,0 +1,215 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  info [
+    ""
+  ]
+  defaultDamping Damping {
+  }
+}
+Viewpoint {
+  orientation -0.1503832015172077 0.1582781506526433 0.9758754632264375 1.5440713987228214
+  position -0.17171181334081986 -0.7904544121237508 0.21929831703795946
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation -0.19 0 0
+  children [
+    DistanceSensor {
+      translation 0.101365 -0.03 0.00504328
+      rotation 0 1 0 2.0994
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds1"
+    }
+    DistanceSensor {
+      translation 0.101365 0.03 0.00504328
+      rotation 0 1 0 2.0994
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds0"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 365.42585398418146
+        axis 0 1 0
+        anchor 0.06 0.06 0.06
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05963498472777159 0.0699965 0.06029537401889811
+        rotation -0.1400463273185009 -0.700192032622704 0.7000843832398247 3.4200266574818325
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "WHEEL4"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 368.3767299910112
+        axis 0 1 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -1.2404466326337474e-05 0.05999910838462258 8.407413463072124e-05
+        rotation -0.827936902680073 -0.3960239982933987 0.3970963081624377 4.525674986514384
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "WHEEL3"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 368.37689577924647
+        axis 0 1 0
+        anchor 0.06 -0.06 -0.06
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 -0.059999999999999984 -0.06
+        rotation -0.49458009041272366 -0.6146788520150878 0.6144594722622119 4.060255610274316
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "WHEEL2"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 368.36974426150425
+        axis 0 1 0
+        anchor -0.06 -0.06 -0.06
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation -0.06001583579532505 -0.06001610020516443 -0.06001060346161913
+        rotation 0.2877090841836507 -0.6772678594630067 0.6771497097515453 2.58141859401116
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "WHEEL1"
+        boundingObject Cylinder {
+          height 0.02
+          radius 0.04
+        }
+        physics Physics {
+        }
+      }
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.1 0.05
+  }
+  physics Physics {
+  }
+  controller "my_controller1"
+}
+RectangleArena {
+  translation 0 0 -0.07
+}
