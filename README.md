@@ -30,3 +30,15 @@ En este tutorial se creó un sólido compuesto en forma de mancuerna utilizando 
 
 **Archivo:** `compound_solid.wbt`
 
+## Tutorial 6: Robot de cuatro ruedas
+
+En este tutorial se creó un robot de cuatro ruedas desde cero. Se construyó el cuerpo del robot, se agregaron las cuatro ruedas mediante HingeJoint y motores rotacionales, y se incorporaron dos sensores de distancia. También se creó un controlador para permitir que el robot se desplazara y evitara obstáculos.
+
+
+## Tutorial 7: Tu primer PROTO
+
+En este tutorial se creó un archivo PROTO a partir del robot de cuatro ruedas realizado anteriormente. Se copió la definición del robot al archivo PROTO y se agregaron campos para modificar propiedades como la posición, rotación y masa del robot, permitiendo reutilizar el modelo fácilmente en diferentes simulaciones.
+
+
+
+
